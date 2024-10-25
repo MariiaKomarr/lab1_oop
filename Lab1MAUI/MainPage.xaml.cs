@@ -15,8 +15,8 @@ namespace Lab1MAUI
 {
     public partial class MainPage : ContentPage
     {
-        int countColumn = 3;
-        int countRow = 3; 
+        int countColumn = 5;
+        int countRow = 5; 
         List<List<EntryStructure>> cells = new List<List<EntryStructure>>();
 
         public MainPage()
@@ -318,7 +318,7 @@ namespace Lab1MAUI
 
         private async void HelpButton_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Довідка", "Лабораторна робота 1. Студентки Комар Марії Петрівни. Варіант ?",
+            await DisplayAlert("Довідка", "Лабораторна робота 1. Студентки Комар Марії Петрівни. Варіант 5",
            "OK");
         }
 

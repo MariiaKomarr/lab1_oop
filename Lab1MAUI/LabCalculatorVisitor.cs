@@ -99,6 +99,23 @@ namespace Lab1MAUI
             }
         }
 
+        public override double VisitIncExpr(LabCalculatorParser.IncExprContext context)
+        {
+            var innerValue = Visit(context.expression());
+            double result = innerValue + 1;
+            Debug.WriteLine($"VisitIncExpr: inc({innerValue}) = {result}");
+            return result;
+        }
+
+        public override double VisitDecExpr(LabCalculatorParser.DecExprContext context)
+        {
+            var innerValue = Visit(context.expression());
+            double result = innerValue - 1;
+            Debug.WriteLine($"VisitDecExpr: dec({innerValue}) = {result}");
+            return result;
+        }
+
+
         private double WalkLeft(LabCalculatorParser.ExpressionContext context)
         {
             return Visit(context.GetRuleContext<LabCalculatorParser.ExpressionContext>(0));
