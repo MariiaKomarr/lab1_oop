@@ -25,7 +25,7 @@ namespace Lab1MAUI
             return result;
         }
 
-        //IdentifierExpr
+       
         public override double VisitIdentifierExpr(LabCalculatorParser.IdentifierExprContext context)
         {
             var result = context.GetText();

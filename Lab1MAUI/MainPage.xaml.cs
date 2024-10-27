@@ -87,7 +87,7 @@ namespace Lab1MAUI
                         VerticalOptions = LayoutOptions.Center,
                         HorizontalOptions = LayoutOptions.Center
                     };
-                    entry.Unfocused += Entry_Unfocused; // обробник події Unfocused
+                    entry.Unfocused += Entry_Unfocused; 
                     entry.Focused += Entry_Focused;
                     Grid.SetRow(entry, row + 1);
                     Grid.SetColumn(entry, col + 1);
@@ -111,7 +111,7 @@ namespace Lab1MAUI
             return columnName;
         }
 
-        //коли користувач вийде зі зміненої клітинки (втратить фокус)
+        //коли користувач вийде зі зміненої клітинки 
         private void Entry_Unfocused(object sender, FocusEventArgs e)
         {
             var entry = (Entry)sender;
@@ -155,8 +155,6 @@ namespace Lab1MAUI
                     cells[i][j].Entry.Text = val.ToString();
                     return;
                 }
-
-                //string result = CalcLink(cells[i][j].Formula);
 
                 string result = Calculator.Evaluate(CalcLink(cells[i][j].Formula)).ToString();
 
@@ -215,7 +213,7 @@ namespace Lab1MAUI
                     }
 
                     output.Append(cellValues[cellAddress]);
-                    i = j - 1; // Пропускаємо оброблені символи
+                    i = j - 1; 
                 }
                 else
                 {

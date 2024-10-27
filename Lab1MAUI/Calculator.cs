@@ -12,7 +12,7 @@ namespace Lab1MAUI
     {
         public static double Evaluate(string expression)
         {
-            //Debug.Write("&&& " + expression + "\n");
+            
             var lexer = new LabCalculatorLexer(new AntlrInputStream(expression));
             lexer.RemoveErrorListeners();
             lexer.AddErrorListener(new ThrowExceptionErrorListener());
@@ -25,7 +25,7 @@ namespace Lab1MAUI
             var visitor = new LabCalculatorVisitor();
 
             var result = visitor.Visit(tree);
-            //Debug.WriteLine("$$$" + result);
+            
             return result;
         }
     }

@@ -26,7 +26,7 @@ namespace Lab1MAUI
 
             if (file == null)
             {
-                return null; // Користувач скасував вибір файлу
+                return null; //скасував вибір файлу
             }
 
             try
